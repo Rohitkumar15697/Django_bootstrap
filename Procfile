@@ -1,1 +1,1 @@
-web:gunicorn firstBootstrap.wsgi
+web:gunicorn firstBootstrap.wsgi --log-file -
