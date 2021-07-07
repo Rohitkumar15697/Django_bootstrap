@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block style%}
+
+    
+
+
+{%endblock%}
+
+
+
+
+{%block body%}
+
+<div class='container-fluid'>
+<div class='page-header bg-success'>
+<h1>Header
+<h1>
+</div>
+
+<div class='row'>
+
+    <div class='col-sm-3 bd-1px'>
+        <p>This is left aside
+        This is left aside
+        This is left aside
+        This is left aside
+        This is left aside
+
+        </P>
+    </div>
+
+<div class='col-sm-6'>
+
+   <form>
+
+    <div class='form-group'>
+
+        
+                
+                {{fm.as_table}}
+                
+  
+    </div><br>
+    
+    <input type='submit' class='btn btn-primary'>
+
+    </form>
+
+        
+    
+    </div>
+
+    <div class='col-sm-3'>
+        <p>This is right aside
+        This is left aside
+        This is left aside
+        This is left aside
+        This is left aside</p>
+    </div>
+
+
+</div>
+
+</div>
+{%endblock%}
