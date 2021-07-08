@@ -6,6 +6,8 @@
 
 {%block body%}
 
+
+    <h1>Go to Blogs link and put some blogs</h1><br>
         <div class='container'>
             <div class='row'>
                 <div class='col-md-4 border'>
@@ -21,17 +23,17 @@
             </div>
         </div>
 
-        <div class='container'>
-        
-            <form>
-                {{fm}}
-                <input type='button' value='Save'>
-            </form>
-            {%for data in data%}
-            {{data}}
+        <br><br>
+
+           {%for data in data%}
+                <div class='container bg-light'>
+                  Posted by: <strong>{{data.name}}</strong><br>
+                  <p class='text-muted'>Posted on {{data.date}}</p>
+                   <p class='lead'> {{data.post}}</p><br>
+                </div>
             {%endfor%}
-        
-        </div>
+
+       
 
         
 

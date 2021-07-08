@@ -1,10 +1,8 @@
-from django.shortcuts import render
-from .forms import ShowDataForm
-from .models import ShowData
+from django.shortcuts import render, HttpResponse
+from blog_app.models import ShowData
 
 
 # Create your views here.
 def index(request):
-    fm=ShowDataForm()
-    data=ShowData.objects.all()
-    return render(request, 'index.html',{'fm':fm,'data':data})
+        data=ShowData.objects.all()[:1]
+        return render(request, 'index.html',{'data':data})

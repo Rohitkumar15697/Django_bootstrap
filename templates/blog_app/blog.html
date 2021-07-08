@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block title%}
+
+{%endblock%}
+
+{%block body%}
+
+    <table class='table'>
+    <form method='post' class='form'>
+        {%csrf_token%}
+    {%for fm in fm %}
+        <tr>
+        <td>{{fm.label}}</td><td>{{fm}}</td>
+    </tr>
+    {%endfor%}
+    <tr>
+    <td><input type='submit' value='Save' class='btn btn-primary'></td>
+</tr>
+</form>
+</table>
+
+    {%for data in data%}
+        <div class='container bg-info'>
+           Posted by: <strong>{{data.name}}</strong><br>
+            <p class='text-muted'>Posted on :{{data.date}}</p>
+            <p>{{data.post}}</p><br><br>
+        </div><br>
+    {%endfor%}
+{%endblock%}

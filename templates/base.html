@@ -13,21 +13,25 @@
     <body>
 
         <div class='container-fluid m-0 p-0'>
-                <nav class='navbar navbar-expand-lg bg-light'>
-                    <a class='navbar-brand text-success'><h1>CoolCoder</h1></a>
+                <nav class='navbar navbar-expand-lg bg-light fixed-top'>
+                     <a class='navbar-brand text-success'>
+                        <img  src="{%static 'img/pyLogo.png'%}" height='50' width='50'>CoolCoder</a>
                     <ul class='navbar-nav'>
-                    <li class='nav-item '><a href='#' class='nav-link '>Home</a></li>
+                    <li class='nav-item '><a href={%url 'home'%} class='nav-link '>Home</a></li>
                     <li class='nav-item '><a href='#' class='nav-link'>About</a></li>
                     <li class='nav-item '><a href='#' class='nav-link'>Contact</a></li>
-                    <li class='nav-item '><a href='#' class='nav-link'>Blogs</a></li>
+                    <li class='nav-item '><a href={%url 'blog'%} class='nav-link'>Blogs</a></li>
                 </ul>
             </nav>
             
         </div>
 
 
-    
-        <div class='container-fluid mt-5 h-75'>
+    <div class='container h-50'>
+        <!--BLANK CONTAINER FOR THE FIXED MENU BAR-->
+    </div>
+
+        <div class='container-fluid'>
 
             {%block body%}
 
@@ -35,7 +39,7 @@
         
         </div>
 
-        <div class='container-fluid bg-dark h-25 '>
+        <div class='container-fluid bg-dark h-25 mt-5'>
 
             <span class='text-info'>Go to my <a href='https://github.com/Rohitkumar15697'>Github</a></span>
 
