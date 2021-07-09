@@ -6,23 +6,26 @@
 
 {%block body%}
 
-<div class='table-responsive'>
-    <table class='table table-sm '>
-    <form method='post' class='form'>
-        {%csrf_token%}
-    {%for fm in fm %}
-        <tr>
-        <td>{{fm.label}}</td><td>{{fm}}</td>
-    </tr>
-    {%endfor%}
-    <tr>
-        <td></td>
-    <td><input type='submit' value='Save' class='btn btn-primary'></td>
-</tr>
-</form>
-</table>
-</div>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <form method='post'>
+                
+                    
+                {%csrf_token%}
+                    
+                
+                    {{fm.as_p}}
+                
 
+                    <input type='submit' value='Post' class='btn btn-primary'>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+<br>
 <div class='container'>
     {%for data in data%}
         
