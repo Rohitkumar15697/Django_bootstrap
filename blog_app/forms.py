@@ -5,4 +5,4 @@ class ShowDataForm(forms.ModelForm):
     class Meta:
         model=ShowData
         fields="__all__"
-        widgets = {'post': forms.Textarea(attrs={'style': 'height: 100px;width:200px'})}
+        widgets = {'post': forms.Textarea(attrs={'style': 'height: 200px;width:400px'})}

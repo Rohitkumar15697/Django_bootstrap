@@ -7,31 +7,41 @@
 {%block body%}
 
 
-    <h1>Go to Blogs link and put some blogs</h1><br>
+    
         <div class='container'>
+            <h1>Rohit Kumar</h1><br>
             <div class='row'>
-                <div class='col-md-4 border'>
-                    <img  src="{%static 'img/ropic.jpg'%}" height='100' width='100'>
+                <div class='col-md-2 col-xs-6'>
+                    <img class='img-responsive' src="{%static 'img/ropic.jpg'%}" height='100' width='100'>
                     
                 </div>
-                <div class='col-md-4 bg-success'>
-                    <img  src="{%static 'img/pyLogo.png'%}" height='100' width='100'>
+                <div class='col-md-3 col-xs-6'>
+                    <p>Name- Rohit Kumar</p>
+                    <p>Email- rk221377@gmail.com</p>
+                    <span class='text-info'>Go to my <a href='https://github.com/Rohitkumar15697'>Github</a></span>
                 </div>
-                <div class='col-md-4 bg-info'>
-                    
-                </div>
+               
+                
             </div>
         </div>
 
         <br><br>
 
-           {%for data in data%}
-                <div class='container bg-light'>
-                  Posted by: <strong>{{data.name}}</strong><br>
-                  <p class='text-muted'>Posted on {{data.date}}</p>
-                   <p class='lead'> {{data.post}}</p><br>
+    <div class='container'>
+    {%for data in data%}
+        
+            <div class='row'>
+                <div class='col-md-8 col-xs-12 bg-light'>
+                Posted by: <strong>{{data.name}}</strong><br>
+                    <p class='text-muted'>Posted on :{{data.date}}</p>
+                    <p class='lead'>{{data.post}}</p><br>
+
                 </div>
-            {%endfor%}
+                
+            </div>
+        <br>
+    {%endfor%}
+</div>
 
        
 

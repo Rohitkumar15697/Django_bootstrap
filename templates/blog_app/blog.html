@@ -6,7 +6,8 @@
 
 {%block body%}
 
-    <table class='table'>
+<div class='table-responsive'>
+    <table class='table table-sm '>
     <form method='post' class='form'>
         {%csrf_token%}
     {%for fm in fm %}
@@ -15,16 +16,26 @@
     </tr>
     {%endfor%}
     <tr>
+        <td></td>
     <td><input type='submit' value='Save' class='btn btn-primary'></td>
 </tr>
 </form>
 </table>
+</div>
 
+<div class='container'>
     {%for data in data%}
-        <div class='container bg-info'>
-           Posted by: <strong>{{data.name}}</strong><br>
-            <p class='text-muted'>Posted on :{{data.date}}</p>
-            <p>{{data.post}}</p><br><br>
-        </div><br>
+        
+            <div class='row'>
+                <div class='col-md-8 bg-light'>
+                Posted by: <strong>{{data.name}}</strong><br>
+                    <p class='text-muted'>Posted on :{{data.date}}</p>
+                    <p>{{data.post}}</p><br>
+
+                </div>
+                
+            </div>
+        <br>
     {%endfor%}
+</div>
 {%endblock%}

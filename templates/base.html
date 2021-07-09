@@ -1,6 +1,7 @@
 {% load static %}
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href={%static 'css/bootstrap.min.css' %}>
         <script type='javascript' src={%static 'js/bootstrap.min.js' %}></script>
         <title>
@@ -12,11 +13,11 @@
 
     <body>
 
-        <div class='container-fluid m-0 p-0'>
+        <div class='container-fluid'>
                 <nav class='navbar navbar-expand-lg bg-light fixed-top'>
-                     <a class='navbar-brand text-success'>
-                        <img  src="{%static 'img/pyLogo.png'%}" height='50' width='50'>CoolCoder</a>
-                    <ul class='navbar-nav'>
+                     <a class='navbar-brand text-success'  href={%url 'home'%}>
+                        <img  src="{%static 'img/pyLogo.png'%}" height='30' width='30'>CooLCoder</a>
+                    <ul class='nav-nabar list-inline d-flex'>
                     <li class='nav-item '><a href={%url 'home'%} class='nav-link '>Home</a></li>
                     <li class='nav-item '><a href='#' class='nav-link'>About</a></li>
                     <li class='nav-item '><a href='#' class='nav-link'>Contact</a></li>
@@ -27,7 +28,7 @@
         </div>
 
 
-    <div class='container h-50'>
+    <div class='container h-25'>
         <!--BLANK CONTAINER FOR THE FIXED MENU BAR-->
     </div>
 
@@ -39,9 +40,9 @@
         
         </div>
 
-        <div class='container-fluid bg-dark h-25 mt-5'>
+        <div class='container-fluid bg-dark p-5 mt-5 text-white'>
 
-            <span class='text-info'>Go to my <a href='https://github.com/Rohitkumar15697'>Github</a></span>
+            Copyright &copy; Copyright Rohit
 
         </div>
     </body>
